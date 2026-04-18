@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Odaba Thelma Christine — Fashion & Commercial Model. Miss Kirinyaga University. Available for brand collaborations, editorial, and commercial bookings."/>
+<title>Odaba Thelma Christine — Miss Kirinyaga University</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --black:#060504;--off-black:#0E0C0B;--charcoal:#1A1714;
+  --white:#FAFAF8;--ivory:#F5F0E8;--cream:#EDE5D8;--beige:#D4C4AA;
+  --gold:#C9A84C;--gold2:#B8922E;--gold3:#DEC270;--gold-light:#F5E8C0;
+  --gold-glow:rgba(201,168,76,0.18);
+  --text-dark:#0E0C0B;--text-mid:#4A4035;--text-muted:#8A7E70;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Jost',sans-serif;
+  --transition:cubic-bezier(0.4,0,0.2,1);
+}
+
+html{scroll-behavior:smooth;cursor:none}
+body{
+  background:var(--white);color:var(--text-dark);
+  font-family:var(--sans);font-weight:300;
+  overflow-x:hidden;
+}
+
+/* ── CUSTOM CURSOR ── */
+.cursor{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--gold);position:fixed;
+  top:0;left:0;pointer-events:none;z-index:9999;
+  transition:transform 0.1s var(--transition);
+  mix-blend-mode:multiply;
+}
+.cursor-ring{
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid var(--gold);position:fixed;
+  top:0;left:0;pointer-events:none;z-index:9998;
+  transition:transform 0.35s var(--transition),width 0.3s,height 0.3s,border-color 0.3s;
+}
+body.hovering .cursor-ring{width:60px;height:60px;border-color:rgba(201,168,76,0.4)}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:0 6%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+  transition:all 0.5s var(--transition);
+  mix-blend-mode:normal;
+}
+nav.scrolled{
+  background:rgba(250,250,248,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:0.5px solid rgba(201,168,76,0.15);
+  box-shadow:0 2px 30px rgba(6,5,4,0.06);
+}
+.nav-logo{
+  font-family:var(--serif);font-size:22px;font-weight:300;
+  letter-spacing:0.12em;color:var(--white);
+  transition:color 0.4s;
+  text-decoration:none;
+}
+nav.scrolled .nav-logo{color:var(--black)}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:42px;list-style:none}
+.nav-links a{
+  font-size:11px;font-weight:400;color:rgba(255,255,255,0.8);
+  text-decoration:none;letter-spacing:0.2em;text-transform:uppercase;
+  transition:color 0.3s;position:relative;
+}
+nav.scrolled .nav-links a{color:var(--text-muted)}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;width:0;height:0.5px;
+  background:var(--gold);transition:width 0.35s var(--transition);
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+nav.scrolled .nav-links a:hover{color:var(--gold)}
+.nav-book{
+  font-family:var(--sans);font-size:10px;font-weight:400;
+  letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);border:0.5px solid var(--gold);
+  padding:9px 22px;text-decoration:none;
+  transition:all 0.3s var(--transition);
+  position:relative;overflow:hidden;
+}
+.nav-book::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold);transform:translateX(-100%);
+  transition:transform 0.35s var(--transition);
+}
+.nav-book:hover::before{transform:translateX(0)}
+.nav-book span{position:relative;z-index:1;transition:color 0.35s}
+.nav-book:hover span{color:var(--black)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:none;padding:6px}
+.hamburger span{width:24px;height:0.5px;background:var(--white);display:block;transition:all 0.3s}
+nav.scrolled .hamburger span{background:var(--black)}
+
+/* ── HERO ── */
+#hero{
+  height:100vh;min-height:700px;
+  position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(160deg,#1a1200 0%,#0a0804 40%,#1a1200 100%);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero-bg-pattern{
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(201,168,76,0.03) 80px,rgba(201,168,76,0.03) 81px),
+    repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(201,168,76,0.03) 80px,rgba(201,168,76,0.03) 81px);
+}
+.hero-model-placeholder{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-model-silhouette{
+  width:420px;height:580px;max-width:60vw;
+  position:absolute;right:10%;bottom:0;
+  background:linear-gradient(160deg,rgba(201,168,76,0.06) 0%,rgba(201,168,76,0.02) 60%,transparent 100%);
+  border-top:0.5px solid rgba(201,168,76,0.15);
+  display:flex;align-items:center;justify-content:center;
+}
+.model-placeholder-inner{
+  font-family:var(--serif);font-size:120px;
+  color:rgba(201,168,76,0.08);font-weight:300;
+  font-style:italic;letter-spacing:-0.05em;
+  user-select:none;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,rgba(6,5,4,0.85) 40%,rgba(6,5,4,0.2) 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  padding:0 6% 80px;
+  width:100%;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  border:0.5px solid var(--gold);
+  padding:7px 18px;margin-bottom:28px;
+  font-size:10px;font-weight:400;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--gold);
+  animation:fadeSlideUp 1s 0.2s both;
+}
+.hero-badge svg{width:14px;height:14px;fill:var(--gold)}
+.hero-name{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(52px,9vw,110px);
+  line-height:0.95;letter-spacing:-0.02em;
+  color:var(--white);
+  animation:fadeSlideUp 1s 0.4s both;
+  margin-bottom:6px;
+}
+.hero-name em{
+  font-style:italic;color:var(--gold3);display:block;
+}
+.hero-tagline{
+  font-size:clamp(11px,1.5vw,13px);font-weight:300;
+  letter-spacing:0.25em;text-transform:uppercase;
+  color:rgba(255,255,255,0.55);
+  margin-bottom:44px;
+  animation:fadeSlideUp 1s 0.6s both;
+}
+.hero-btns{
+  display:flex;gap:14px;flex-wrap:wrap;
+  animation:fadeSlideUp 1s 0.8s both;
+}
+.btn-gold{
+  background:var(--gold);color:var(--black);
+  padding:14px 36px;font-size:11px;font-weight:400;
+  letter-spacing:0.2em;text-transform:uppercase;
+  text-decoration:none;border:none;cursor:none;
+  transition:all 0.3s var(--transition);display:inline-block;
+}
+.btn-gold:hover{background:var(--gold3);transform:translateY(-1px);box-shadow:0 8px 32px rgba(201,168,76,0.3)}
+.btn-ghost{
+  background:transparent;color:var(--white);
+  padding:14px 36px;font-size:11px;font-weight:400;
+  letter-spacing:0.2em;text-transform:uppercase;
+  text-decoration:none;border:0.5px solid rgba(255,255,255,0.4);
+  cursor:none;transition:all 0.3s var(--transition);display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
+.hero-scroll-indicator{
+  position:absolute;bottom:32px;right:6%;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;font-family:var(--sans);z-index:2;
+  animation:fadeSlideUp 1s 1.2s both;
+}
+.scroll-bar{width:0.5px;height:52px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{transform:scaleY(1);opacity:0.6}50%{transform:scaleY(0.6);opacity:1}}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── MARQUEE STRIP ── */
+.marquee-strip{
+  background:var(--gold);
+  padding:12px 0;overflow:hidden;
+  position:relative;z-index:1;
+}
+.marquee-inner{
+  display:flex;gap:0;
+  animation:marquee 18s linear infinite;
+  white-space:nowrap;
+}
+.marquee-item{
+  font-family:var(--serif);font-size:14px;font-weight:300;
+  font-style:italic;color:var(--black);
+  padding:0 32px;letter-spacing:0.06em;
+  flex-shrink:0;
+}
+.marquee-dot{color:rgba(6,5,4,0.3)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── SECTIONS ── */
+section{position:relative}
+.section-label{
+  font-family:var(--sans);font-size:10px;font-weight:400;
+  letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;
+  display:flex;align-items:center;gap:14px;
+}
+.section-label::before{content:'';width:24px;height:0.5px;background:var(--gold)}
+.section-title{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(36px,5vw,62px);
+  line-height:1.1;letter-spacing:-0.02em;
+  color:var(--text-dark);
+}
+.section-title em{font-style:italic;color:var(--text-muted)}
+
+/* ── CROWN / TITLE SECTION ── */
+#crown{
+  background:var(--black);
+  padding:110px 6%;
+  overflow:hidden;position:relative;
+}
+#crown::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,168,76,0.06),transparent 70%);
+}
+.crown-content{
+  max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1;
+}
+.crown-icon{
+  display:flex;justify-content:center;margin-bottom:36px;
+}
+.crown-svg{
+  width:72px;height:72px;
+  filter:drop-shadow(0 0 20px rgba(201,168,76,0.4));
+}
+.crown-pre{
+  font-family:var(--sans);font-size:10px;font-weight:400;
+  letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:22px;
+}
+.crown-title{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(38px,6vw,72px);
+  color:var(--white);line-height:1.1;
+  letter-spacing:-0.02em;margin-bottom:28px;
+}
+.crown-title em{font-style:italic;color:var(--gold3)}
+.crown-statement{
+  font-size:15px;font-weight:300;color:rgba(255,255,255,0.55);
+  max-width:600px;margin:0 auto 48px;line-height:1.85;letter-spacing:0.02em;
+}
+.crown-line{
+  width:80px;height:0.5px;background:var(--gold);
+  margin:0 auto;
+}
+.crown-gallery{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:3px;
+  margin-top:60px;
+}
+.crown-gallery-item{
+  aspect-ratio:3/4;
+  background:var(--off-black);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;
+  transition:transform 0.5s var(--transition);
+}
+.crown-gallery-item:hover{transform:scale(1.02);z-index:1}
+.crown-gallery-item::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,5,4,0.5),transparent 50%);
+}
+.gallery-placeholder{
+  font-family:var(--serif);font-size:52px;
+  color:rgba(201,168,76,0.1);font-style:italic;
+}
+
+ 
+#about{
+  padding:120px 6%;
+  background:var(--ivory);
+}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;margin-top:64px;
+}
+.about-image-area{position:relative}
+.about-main-img{
+  width:100%;aspect-ratio:2/3;
+  background:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.about-img-label{
+  position:absolute;bottom:24px;left:24px;
+  background:var(--black);color:var(--white);
+  font-size:9px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;
+  padding:8px 16px;z-index:1;
+}
+.about-secondary-img{
+  width:55%;aspect-ratio:3/4;
+  background:var(--beige);
+  position:absolute;right:-8%;bottom:-8%;
+  display:flex;align-items:center;justify-content:center;
+  border:6px solid var(--ivory);
+  overflow:hidden;
+}
+.img-placeholder{
+  font-family:var(--serif);font-size:clamp(32px,6vw,52px);
+  color:rgba(0,0,0,0.08);font-style:italic;
+  letter-spacing:0.1em;user-select:none;
+}
+.about-text{}
+.about-name-large{
+  font-family:var(--serif);font-weight:300;font-style:italic;
+  font-size:clamp(28px,4vw,44px);color:var(--text-muted);
+  margin-bottom:24px;line-height:1.2;
+}
+.about-bio{
+  font-size:15px;font-weight:300;color:var(--text-mid);
+  line-height:1.9;margin-bottom:32px;
+}
+.about-traits{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:36px;
+}
+.trait{
+  display:flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:400;color:var(--text-mid);
+  letter-spacing:0.08em;
+}
+.trait::before{content:'—';color:var(--gold);font-size:14px}
+.about-meta{
+  display:flex;gap:28px;flex-wrap:wrap;padding-top:28px;
+  border-top:0.5px solid var(--beige);
+}
+.about-meta-item{}
+.meta-label{font-size:9px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px}
+.meta-value{font-family:var(--serif);font-size:15px;font-weight:300;color:var(--text-dark)}
+
+
+#stats{
+  background:var(--black);
+  padding:100px 6%;
+}
+.stats-layout{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;margin-top:60px;
+}
+.stats-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:1px;background:rgba(201,168,76,0.15);
+}
+.stat-item{
+  background:var(--black);
+  padding:36px 28px;
+  transition:background 0.3s;
+}
+.stat-item:hover{background:rgba(201,168,76,0.04)}
+.stat-label{
+  font-size:9px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.stat-value{
+  font-family:var(--serif);font-size:22px;font-weight:300;
+  color:var(--white);letter-spacing:0.04em;
+}
+.stats-image{
+  aspect-ratio:3/4;background:var(--charcoal);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.stats-image::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(160deg,rgba(201,168,76,0.08),transparent 60%);
+}
+
+
+#portfolio{
+  padding:120px 6% 60px;
+  background:var(--white);
+}
+.portfolio-filters{
+  display:flex;gap:0;margin-top:48px;margin-bottom:48px;
+  overflow-x:auto;border-bottom:0.5px solid var(--cream);
+  scrollbar-width:none;
+}
+.portfolio-filters::-webkit-scrollbar{display:none}
+.filter-btn{
+  font-size:10px;font-weight:400;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--text-muted);
+  padding:14px 28px;cursor:none;
+  background:transparent;border:none;
+  border-bottom:1.5px solid transparent;
+  transition:all 0.25s;white-space:nowrap;
+  font-family:var(--sans);
+}
+.filter-btn:hover,.filter-btn.active{
+  color:var(--gold);border-bottom-color:var(--gold);
+}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:4px;
+}
+.portfolio-item{
+  background:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;cursor:none;
+  transition:all 0.5s var(--transition);
+}
+.portfolio-item:hover .pi-overlay{opacity:1}
+.portfolio-item:hover .pi-img{transform:scale(1.06)}
+.pi-img{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform 0.6s var(--transition);
+}
+.pi-overlay{
+  position:absolute;inset:0;
+  background:rgba(6,5,4,0.6);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;opacity:0;transition:opacity 0.35s;
+}
+.pi-overlay-label{
+  font-family:var(--serif);font-size:15px;font-weight:300;
+  font-style:italic;color:var(--white);letter-spacing:0.04em;
+}
+.pi-overlay-cat{
+  font-size:9px;font-weight:400;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--gold);
+}
+
+
+.pi-1{grid-column:span 5;aspect-ratio:3/4}
+.pi-2{grid-column:span 4;aspect-ratio:3/4}
+.pi-3{grid-column:span 3;aspect-ratio:3/4}
+.pi-4{grid-column:span 7;aspect-ratio:16/9}
+.pi-5{grid-column:span 5;aspect-ratio:16/9}
+.pi-6{grid-column:span 4;aspect-ratio:3/4}
+.pi-7{grid-column:span 4;aspect-ratio:3/4}
+.pi-8{grid-column:span 4;aspect-ratio:3/4}
+
+
+#featured{
+  background:var(--ivory);
+  padding:100px 6%;
+}
+.featured-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:24px;margin-top:56px;
+}
+.featured-item{
+  position:relative;overflow:hidden;cursor:none;
+}
+.featured-item-img{
+  aspect-ratio:3/4;background:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.featured-item-img > div{
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  transition:transform 0.6s var(--transition);
+}
+.featured-item:hover .featured-item-img > div{transform:scale(1.05)}
+.featured-meta{padding:18px 0 0}
+.featured-category{
+  font-size:9px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px;
+}
+.featured-title{
+  font-family:var(--serif);font-size:20px;font-weight:300;
+  color:var(--text-dark);font-style:italic;
+}
+
+
+#clients{
+  padding:100px 6%;
+  background:var(--white);
+}
+.clients-logos{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:0;border:0.5px solid var(--cream);
+  margin-top:56px;
+}
+.client-item{
+  padding:36px 24px;
+  border-right:0.5px solid var(--cream);
+  border-bottom:0.5px solid var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.25s;cursor:default;
+}
+.client-item:hover{background:var(--ivory)}
+.client-name{
+  font-family:var(--serif);font-size:18px;font-weight:300;
+  letter-spacing:0.12em;color:var(--text-muted);
+  font-style:italic;transition:color 0.25s;text-align:center;
+}
+.client-item:hover .client-name{color:var(--gold)}
+
+
+.testimonials-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;
+  margin-top:56px;
+}
+.testimonial{
+  background:var(--ivory);padding:44px;
+  position:relative;
+}
+.testimonial::before{
+  content:'"';position:absolute;top:24px;left:40px;
+  font-family:var(--serif);font-size:80px;font-weight:300;
+  color:rgba(201,168,76,0.12);line-height:1;
+}
+.testi-text{
+  font-family:var(--serif);font-size:18px;font-weight:300;
+  font-style:italic;color:var(--text-mid);line-height:1.8;
+  margin-bottom:28px;padding-top:30px;
+}
+.testi-author{
+  font-size:11px;font-weight:400;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--text-muted);
+}
+.testi-author span{color:var(--gold)}
+
+
+#media{
+  padding:100px 6%;
+  background:var(--black);
+}
+#media .section-label{
+  color:var(--gold);
+}
+#media .section-title{color:var(--white)}
+.media-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3px;margin-top:56px;
+}
+.media-item{
+  position:relative;overflow:hidden;cursor:none;
+  background:var(--off-black);aspect-ratio:16/14;
+  display:flex;align-items:center;justify-content:center;
+}
+.media-item.tall{aspect-ratio:9/16;grid-row:span 2}
+.play-btn{
+  width:64px;height:64px;border-radius:50%;
+  background:rgba(201,168,76,0.15);border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1;transition:all 0.3s;
+}
+.play-btn svg{width:20px;height:20px;fill:var(--gold);margin-left:3px}
+.media-item:hover .play-btn{background:var(--gold);border-color:var(--gold)}
+.media-item:hover .play-btn svg{fill:var(--black)}
+.media-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,5,4,0.7),rgba(6,5,4,0.1));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+}
+.media-title{
+  font-family:var(--serif);font-size:16px;font-weight:300;
+  font-style:italic;color:var(--white);letter-spacing:0.04em;
+  position:relative;z-index:1;
+}
+
+/* ── CONTACT ── */
+#contact{
+  padding:120px 6%;
+  background:var(--ivory);
+}
+.contact-layout{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:start;margin-top:64px;
+}
+.contact-info{}
+.contact-intro{
+  font-family:var(--serif);font-size:clamp(22px,3vw,36px);
+  font-weight:300;font-style:italic;color:var(--text-dark);
+  line-height:1.4;margin-bottom:36px;
+}
+.contact-details{display:flex;flex-direction:column;gap:20px;margin-bottom:44px}
+.contact-row{
+  display:flex;align-items:center;gap:16px;padding-bottom:20px;
+  border-bottom:0.5px solid var(--beige);
+}
+.contact-icon-wrap{
+  width:40px;height:40px;border:0.5px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-icon-wrap svg{width:16px;height:16px;stroke:var(--gold);fill:none}
+.contact-detail-label{
+  font-size:9px;font-weight:400;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--text-muted);margin-bottom:3px;
+}
+.contact-detail-value{
+  font-family:var(--serif);font-size:15px;font-weight:300;
+  color:var(--text-dark);
+}
+.social-row{display:flex;gap:12px}
+.social-link{
+  width:40px;height:40px;border:0.5px solid var(--beige);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:11px;font-weight:400;
+  letter-spacing:0.08em;color:var(--text-muted);
+  transition:all 0.25s;font-family:var(--sans);
+}
+.social-link:hover{border-color:var(--gold);color:var(--gold)}
+.contact-form{}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{margin-bottom:16px}
+.form-label{
+  font-size:9px;font-weight:400;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--gold);
+  display:block;margin-bottom:8px;
+}
+.form-input{
+  width:100%;background:transparent;
+  border:none;border-bottom:0.5px solid var(--beige);
+  padding:12px 0;font-size:14px;font-weight:300;
+  color:var(--text-dark);font-family:var(--sans);
+  outline:none;transition:border-color 0.25s;
+}
+.form-input:focus{border-color:var(--gold)}
+.form-input::placeholder{color:var(--text-muted)}
+textarea.form-input{resize:none;min-height:100px}
+.btn-book-full{
+  width:100%;background:var(--black);color:var(--white);
+  border:none;padding:18px;cursor:none;
+  font-size:11px;font-weight:400;letter-spacing:0.25em;
+  text-transform:uppercase;font-family:var(--sans);
+  transition:all 0.3s;position:relative;overflow:hidden;
+  margin-top:8px;
+}
+.btn-book-full::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold);transform:translateX(-100%);
+  transition:transform 0.4s var(--transition);
+}
+.btn-book-full:hover::before{transform:translateX(0)}
+.btn-book-full span{position:relative;z-index:1;transition:color 0.4s}
+.btn-book-full:hover span{color:var(--black)}
+
+
+footer{
+  background:var(--black);
+  padding:48px 6%;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:24px;
+  border-top:0.5px solid rgba(201,168,76,0.15);
+}
+.footer-logo{
+  font-family:var(--serif);font-size:13px;font-weight:300;
+  letter-spacing:0.3em;color:rgba(255,255,255,0.5);
+  text-transform:uppercase;
+}
+.footer-logo span{color:var(--gold)}
+.footer-center{
+  font-family:var(--serif);font-size:28px;font-weight:300;
+  font-style:italic;color:rgba(255,255,255,0.15);
+  letter-spacing:0.08em;
+}
+.footer-copy{
+  font-size:10px;font-weight:300;color:rgba(255,255,255,0.3);
+  letter-spacing:0.12em;
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.9s var(--transition),transform 0.9s var(--transition)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.9s var(--transition),transform 0.9s var(--transition)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.9s var(--transition),transform 0.9s var(--transition)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.reveal:nth-child(2){transition-delay:0.1s}
+.reveal:nth-child(3){transition-delay:0.2s}
+.reveal:nth-child(4){transition-delay:0.3s}
+
+/* ── LIGHTBOX ── */
+.lightbox{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(6,5,4,0.95);
+  display:none;align-items:center;justify-content:center;
+  backdrop-filter:blur(4px);
+}
+.lightbox.open{display:flex}
+.lightbox-inner{
+  max-width:80vw;max-height:90vh;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.lightbox-close{
+  position:absolute;top:-50px;right:0;
+  background:none;border:none;color:var(--white);
+  font-size:28px;cursor:none;
+  font-family:var(--serif);font-weight:300;
+  opacity:0.6;transition:opacity 0.2s;
+}
+.lightbox-close:hover{opacity:1}
+.lightbox-content{
+  background:var(--cream);
+  width:400px;height:560px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:72px;
+  color:rgba(0,0,0,0.08);font-style:italic;
+}
+
+/* ── OTC WATERMARK ── */
+.otc-mark{
+  position:absolute;bottom:24px;left:32px;
+  font-family:var(--serif);font-size:48px;font-weight:300;
+  font-style:italic;color:rgba(201,168,76,0.08);
+  letter-spacing:0.06em;pointer-events:none;
+  z-index:0;user-select:none;
+}
+
+/* ── DARK MODE ── */
+body.dark-mode{
+  --white:#0A0907;--ivory:#0E0B09;--cream:#141009;
+  --beige:#2A2218;--text-dark:#F5F0E8;--text-mid:#C4B9AA;
+  --text-muted:#7A7060;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .about-grid,.stats-layout,.contact-layout,.testimonials-grid{grid-template-columns:1fr}
+  .about-secondary-img{display:none}
+  .clients-logos{grid-template-columns:repeat(3,1fr)}
+  .featured-grid{grid-template-columns:1fr 1fr}
+  .media-grid{grid-template-columns:1fr}
+  .media-item.tall{aspect-ratio:16/9;grid-row:span 1}
+  .portfolio-item.pi-1{grid-column:span 12}
+  .portfolio-item.pi-2{grid-column:span 6}
+  .portfolio-item.pi-3{grid-column:span 6}
+  .portfolio-item.pi-4{grid-column:span 12}
+  .portfolio-item.pi-5{grid-column:span 12}
+  .nav-links,.nav-book{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .crown-gallery{grid-template-columns:1fr 1fr}
+  .clients-logos{grid-template-columns:1fr 1fr}
+  .featured-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero-name{font-size:clamp(44px,14vw,80px)}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <div class="lightbox-content" id="lightboxContent">OTC</div>
+  </div>
+</div>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo"><span>OTC</span> — Odaba Thelma Christine</a>
+  <ul class="nav-links">
+    <li><a href="#crown">Title</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-book"><span>Book Me</span></a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-model-silhouette">
+        
+      <div class="model-placeholder-inner" >
+        <img src="Cover.jpeg" height="550" width="450">
+        OTC</div>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L9.5 8.5H3L8.5 12.5L6.5 19L12 15L17.5 19L15.5 12.5L21 8.5H14.5L12 2Z"/></svg>
+      Miss Kirinyaga University
+    </div>
+    <h1 class="hero-name">
+      Odaba Thelma
+      <em>Christine</em>
+    </h1>
+    <p class="hero-tagline">Fashion &amp; Commercial Model &nbsp;|&nbsp; Elegance, Confidence &amp; Influence</p>
+    <div class="hero-btns">
+      <a href="#portfolio" class="btn-gold">View Portfolio</a>
+      <a href="#contact" class="btn-ghost">Book Me</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-bar"></div>
+    scroll
+  </div>
+</section>
+
+
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Fashion Modeling <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Miss Kirinyaga University <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Commercial Campaigns <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Editorial Work <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Brand Collaborations <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Runway & Lifestyle <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Beauty Campaigns <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Available for Bookings <span class="marquee-dot">✦</span></span>
+    
+    <span class="marquee-item">Fashion Modeling <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Miss Kirinyaga University <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Commercial Campaigns <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Editorial Work <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Brand Collaborations <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Runway & Lifestyle <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Beauty Campaigns <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Available for Bookings <span class="marquee-dot">✦</span></span>
+  </div>
+</div>
+
+
+<section id="crown">
+  <div class="crown-content">
+    <div class="crown-icon">
+      <svg class="crown-svg" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 50 L10 35 L25 15 L40 30 L55 10 L70 35 L70 50 Z" fill="none" stroke="#C9A84C" stroke-width="1"/>
+        <circle cx="10" cy="35" r="4" fill="#C9A84C"/>
+        <circle cx="40" cy="30" r="4" fill="#C9A84C"/>
+        <circle cx="70" cy="35" r="4" fill="#C9A84C"/>
+        <circle cx="25" cy="15" r="3" fill="#DEC270"/>
+        <circle cx="55" cy="10" r="3" fill="#DEC270"/>
+        <line x1="10" y1="50" x2="70" y2="50" stroke="#C9A84C" stroke-width="0.5"/>
+        <line x1="5" y1="55" x2="75" y2="55" stroke="rgba(201,168,76,0.3)" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <div class="crown-pre reveal">Crowned &amp; Reigning</div>
+    <h2 class="crown-title reveal">Miss Kirinyaga<br><em>University</em></h2>
+    <p class="crown-statement reveal">Crowned Miss Kirinyaga University, Odaba Thelma Christine represents beauty, intelligence, and influence — carrying her title with grace, purpose, and undeniable presence.</p>
+    <div class="crown-line reveal"></div>
+
+    <div class="crown-gallery">
+      <div class="crown-gallery-item reveal">
+        <img src="missKYU.jpeg" height="300">
+        <div style="position:absolute;bottom:14px;left:14px;z-index:1;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(201,168,76,0.6);font-family:var(--sans)">Coronation</div>
+      </div>
+      <div class="crown-gallery-item reveal">
+        <img src="Vc.jpeg" height="300">
+        <div style="position:absolute;bottom:14px;left:14px;z-index:1;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(201,168,76,0.6);font-family:var(--sans)">Pageant</div>
+      </div>
+      <div class="crown-gallery-item reveal">
+        <img src="Crown.jpeg" height="300">
+        <div style="position:absolute;bottom:14px;left:14px;z-index:1;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(201,168,76,0.6);font-family:var(--sans)">Crown</div>
+      </div>
+      <div class="crown-gallery-item reveal">
+        <img src="Runway.png" height="300">
+        <div style="position:absolute;bottom:14px;left:14px;z-index:1;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(201,168,76,0.6);font-family:var(--sans)">Runway</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about">
+  <div class="otc-mark">OTC</div>
+  <div class="section-label">About</div>
+  <h2 class="section-title">The face,<br>the <em>force</em>, the brand</h2>
+
+  <div class="about-grid">
+    <div class="about-image-area reveal-left">
+      <div class="about-main-img">
+        <img src="Back.jpeg" height="900">
+        <div class="about-img-label">Odaba Thelma Christine</div>
+      </div>
+      <div class="about-secondary-img">
+        <img src="Front.jpeg" height="450">
+      </div>
+    </div>
+
+    <div class="reveal-right">
+      <p class="about-name-large">Odaba Thelma Christine</p>
+      <p class="about-bio">Odaba Thelma Christine is a fashion and commercial model and the current Miss Kirinyaga University. Known for her commanding presence, refined elegance, and remarkable versatility, she collaborates with brands, agencies, and influencers to craft impactful visual narratives that resonate and convert.</p>
+      <p class="about-bio">Her approach to modeling goes beyond aesthetics — she brings intelligence, intentionality, and storytelling to every frame.</p>
+
+      <div class="about-traits">
+        <div class="trait">Elegant &amp; Commanding</div>
+        <div class="trait">Versatile Across Styles</div>
+        <div class="trait">Strong On-Camera Presence</div>
+        <div class="trait">Brand-Focused</div>
+        <div class="trait">Professional &amp; Reliable</div>
+        <div class="trait">High Fashion + Commercial</div>
+      </div>
+
+      <div class="about-meta">
+        <div class="about-meta-item">
+          <div class="meta-label">Location</div>
+          <div class="meta-value">Kirinyaga, Kenya</div>
+        </div>
+        <div class="about-meta-item">
+          <div class="meta-label">Availability</div>
+          <div class="meta-value">Open to travel</div>
+        </div>
+        <div class="about-meta-item">
+          <div class="meta-label">Title</div>
+          <div class="meta-value">Miss Kirinyaga Uni</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="stats">
+  <div class="section-label" style="color:var(--gold)">Model Card</div>
+  <h2 class="section-title" style="color:var(--white)">Her <em style="color:var(--beige)">measurements</em></h2>
+
+  <div class="stats-layout">
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-label">Height</div>
+        <div class="stat-value">5'7" / 172 cm</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Bust</div>
+        <div class="stat-value">34"</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Waist</div>
+        <div class="stat-value">29"</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Hips</div>
+        <div class="stat-value">40"</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Shoe Size</div>
+        <div class="stat-value">UK 6 / EU 40</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Dress Size</div>
+        <div class="stat-value">UK 8 / EU 36</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Hair</div>
+        <div class="stat-value">Black</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Eyes</div>
+        <div class="stat-value">Dark Brown</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Ethnicity</div>
+        <div class="stat-value">Kenyan</div>
+      </div>
+    </div>
+
+    <div class="stats-image reveal">
+      <img src="Model.jpeg" height="800" width="550">
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO ── -->
+<section id="portfolio">
+  <div class="section-label">Portfolio</div>
+  <h2 class="section-title">Selected<br><em>Works</em></h2>
+
+  <div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">All Work</button>
+    <button class="filter-btn" data-filter="editorial">Editorial</button>
+    <button class="filter-btn" data-filter="commercial">Commercial</button>
+    <button class="filter-btn" data-filter="fashion">Fashion Campaigns</button>
+    <button class="filter-btn" data-filter="beauty">Beauty</button>
+    <button class="filter-btn" data-filter="pageant">Miss Kirinyaga</button>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item pi-1" style="background:linear-gradient(160deg,#1a1410,#2a1f14)" onclick="openLightbox('Editorial — Campaign 01')">
+      <div class="pi-img"><img src="Editorial.jpeg" height="640" width="500"></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Campaign 01</div><div class="pi-overlay-cat">Editorial</div></div>
+    </div>
+    <div class="portfolio-item pi-2" style="background:linear-gradient(160deg,#0e1018,#181a24)" onclick="openLightbox('Fashion — Night Campaign')">
+      <div class="pi-img"><img src="gallery1.png" alt=""></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Night Campaign</div><div class="pi-overlay-cat">Fashion</div></div>
+    </div>
+    <div class="portfolio-item pi-3" style="background:linear-gradient(160deg,#12100e,#1a1612)" onclick="openLightbox('Beauty — Close Up')">
+      <div class="pi-img"><img src="BeautyClosup.jpeg" height="400" width="300"></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Beauty Close-Up</div><div class="pi-overlay-cat">Beauty</div></div>
+    </div>
+    <div class="portfolio-item pi-4" style="background:linear-gradient(135deg,#0a1018,#14101a)" onclick="openLightbox('Commercial — Brand Campaign')">
+      <div class="pi-img"><div class="img-placeholder" style="color:rgba(255,255,255,0.04);font-size:80px">✦<img src="missKYU.jpeg" height="650" width="650"></div></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Brand Campaign</div><div class="pi-overlay-cat">Commercial</div></div>
+    </div>
+    <div class="portfolio-item pi-5" style="background:linear-gradient(135deg,#100a08,#1a1210)" onclick="openLightbox('Pageant — Miss Kirinyaga University')">
+      <div class="pi-img"><div class="img-placeholder" style="color:rgba(201,168,76,0.1);font-size:80px">OTC<img src="Vc.jpeg" height="500" width="500"></div></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Miss Kirinyaga University</div><div class="pi-overlay-cat"></div></div>
+    </div>
+    <div class="portfolio-item pi-6" style="background:linear-gradient(160deg,#0f1218,#161a22)" onclick="openLightbox('Editorial — Studio Series')">
+      <div class="pi-img"><div class="img-placeholder" style="color:rgba(255,255,255,0.05);font-size:44px">✦<img src="StudioSeries.jpeg" height="550"></div></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Studio Series</div><div class="pi-overlay-cat">Editorial</div></div>
+    </div>
+    <div class="portfolio-item pi-7" style="background:linear-gradient(160deg,#100e0a,#181410)" onclick="openLightbox('Fashion — Outdoor Campaign')">
+      <div class="pi-img"><div class="img-placeholder" style="color:rgba(201,168,76,0.07);font-size:44px"><img src="Crown.jpeg" height="500"></div></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Outdoor Campaign</div><div class="pi-overlay-cat">Fashion</div></div>
+    </div>
+    <div class="portfolio-item pi-8" style="background:linear-gradient(160deg,#0e0c10,#16121a)" onclick="openLightbox('Beauty — Jewellery')">
+      <div class="pi-img"><div class="img-placeholder" style="color:rgba(255,255,255,0.05);font-size:44px"><img src="jewelry.jpeg" height="500" width="400"></div></div>
+      <div class="pi-overlay"><div class="pi-overlay-label">Jewellery Campaign</div><div class="pi-overlay-cat">Beauty</div></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:48px">
+    <a href="#contact" class="btn-gold" style="display:inline-block">Request Full Portfolio</a>
+  </div>
+</section>
+
+<!-- ── FEATURED WORK ── -->
+<section id="featured">
+  <div class="section-label">Featured</div>
+  <h2 class="section-title">This season's<br><em>highlights</em></h2>
+
+  <div class="featured-grid">
+    <div class="featured-item reveal">
+      <div class="featured-item-img" style="background:linear-gradient(160deg,#1a1614,#2a2018)">
+        <div><div class="img-placeholder" style="font-size:56px;color:rgba(255,255,255,0.06)"><img src="StudioSeries.jpeg" height="550"></div></div>
+      </div>
+      <div class="featured-meta">
+        <div class="featured-category">Editorial — 2024</div>
+        <div class="featured-title">The Ivory Campaign</div>
+      </div>
+    </div>
+    <div class="featured-item reveal">
+      <div class="featured-item-img" style="background:linear-gradient(160deg,#10141a,#161c24)">
+        <div><div class="img-placeholder" style="font-size:56px;color:rgba(201,168,76,0.07)"><img src="OTC.jpeg" height="530"></div></div>
+      </div>
+      <div class="featured-meta">
+        <div class="featured-category">Commercial — 2024</div>
+        <div class="featured-title">Luxe Brand Feature</div>
+      </div>
+    </div>
+    <div class="featured-item reveal">
+      <div class="featured-item-img" style="background:linear-gradient(160deg,#100e0c,#1a1614)">
+        <div><div class="img-placeholder" style="font-size:56px;color:rgba(255,255,255,0.05)"><img src="MissK.jpeg" height="550"></div></div>
+      </div>
+      <div class="featured-meta">
+        <div class="featured-category">Pageant — Miss Kirinyaga Uni</div>
+        <div class="featured-title">Coronation Portrait</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLIENTS ── -->
+<section id="clients">
+  <div class="section-label">Collaborations</div>
+  <h2 class="section-title">Brands &amp;<br><em>Partners</em></h2>
+
+  <div class="clients-logos reveal">
+    <div class="client-item"><div class="client-name">Vogue Africa</div></div>
+    <div class="client-item"><div class="client-name">Kenyan Brands Co.</div></div>
+    <div class="client-item"><div class="client-name">Glam Studios</div></div>
+    <div class="client-item"><div class="client-name">Luxe Agency</div></div>
+    <div class="client-item"><div class="client-name">Beauty House</div></div>
+    <div class="client-item"><div class="client-name">Editorial KE</div></div>
+    <div class="client-item"><div class="client-name">Fashion Week</div></div>
+    <div class="client-item"><div class="client-name">Campaign Studio</div></div>
+    <div class="client-item"><div class="client-name">Style Agency</div></div>
+    <div class="client-item"><div class="client-name">Kirinyaga Uni</div></div>
+  </div>
+
+  <div class="testimonials-grid" style="margin-top:4px">
+    <div class="testimonial reveal">
+      <div class="testi-text">"Thelma brought an extraordinary presence to our campaign. Her professionalism, discipline, and natural elegance elevated every single frame. We'd collaborate again without hesitation."</div>
+      <div class="testi-author">James K. — <span>Creative Director, Glam Studios Nairobi</span></div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="testi-text">"Working with Odaba Thelma Christine was seamless from start to finish. She understood the brief immediately, arrived prepared, and delivered shots that exceeded our client's expectations."</div>
+      <div class="testi-author">Andrew O. — <span>Brand Manager, Luxe Agency Kenya</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="media">
+  <div class="section-label">Media</div>
+  <h2 class="section-title" style="color:var(--white)">Video <em style="color:rgba(255,255,255,0.3)">Reels</em></h2>
+
+  <div class="media-grid">
+    <div class="media-item tall" style="background:linear-gradient(160deg,#0a0806,#141008)">
+      <video src="ThelmaDeQueen.mp4" autoplay muted height="1000"></video>
+    </div>
+    <div class="media-item" style="background:linear-gradient(135deg,#08100e,#0c1614)">
+      <video src="shootDay.mp4" autoplay muted height="700"></video>
+    </div>
+    <div class="media-item" style="background:linear-gradient(135deg,#100808,#180c0c)">
+      <video src="MissKyu Coronation.mp4" autoplay muted height="700"></video>
+    </div>
+    <div class="media-item" style="background:linear-gradient(135deg,#080a10,#0c0e14)">
+      <video src="Coronation.mp4" autoplay muted height="700"></video>
+    </div>
+    <div class="media-item" style="background:linear-gradient(135deg,#0e0a08,#14100c)">
+      <video src="OTC vid.mp4" autoplay muted height="600"></video>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-label">Contact &amp; Booking</div>
+  <h2 class="section-title">Let's create<br><em>something remarkable</em></h2>
+
+  <div class="contact-layout">
+    <div class="contact-info reveal-left">
+      <p class="contact-intro">Ready to collaborate? I'm available for editorial, commercial, and brand campaigns. Let's build something impactful together.</p>
+
+      <div class="contact-details">
+        <div class="contact-row">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value">thelma.christine@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 18.87a19.5 19.5 0 01-5-5A19.79 19.79 0 013.06 4.15 2 2 0 015.07 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">WhatsApp / Phone</div>
+            <div class="contact-detail-value">+254 790 604077</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-value">Kirinyaga, Kenya — Available to travel</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-row">
+        <a href="#" class="social-link" title="Instagram">IG</a>
+        <a href="#" class="social-link" title="TikTok">TT</a>
+        <a href="#" class="social-link" title="Facebook">FB</a>
+        <a href="#" class="social-link" title="LinkedIn">LI</a>
+      </div>
+    </div>
+
+    <div class="contact-form reveal-right">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Your name</label>
+          <input class="form-input" type="text" placeholder="Thelma Christine"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email address</label>
+          <input class="form-input" type="email" placeholder="odaba@brand.com"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Company / Brand</label>
+        <input class="form-input" type="text" placeholder="Brand or Agency name"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Project type</label>
+        <input class="form-input" type="text" placeholder="e.g. Editorial shoot, brand campaign, runway..."/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-input" placeholder="Tell me about your project — dates, vision, deliverables..."></textarea>
+      </div>
+      <button class="btn-book-full" onclick="handleBooking(this)"><span>Book Odaba Thelma Christine →</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo"><span>OTC</span> — Odaba Thelma Christine</div>
+  <div class="footer-center">Thelma</div>
+  <div class="footer-copy">© 2025 Odaba Thelma Christine. All rights reserved.</div>
+</footer>
+
+<script>
+/* ── CUSTOM CURSOR ── */
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',(e)=>{
+  mx=e.clientX;my=e.clientY;
+  cursor.style.transform=`translate(${mx-4}px,${my-4}px)`;
+});
+const lerp=(a,b,t)=>a+(b-a)*t;
+function animateRing(){
+  rx=lerp(rx,mx,0.12);ry=lerp(ry,my,0.12);
+  ring.style.transform=`translate(${rx-18}px,${ry-18}px)`;
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a,button,.portfolio-item,.crown-gallery-item,.media-item,.featured-item,.client-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
+});
+
+/* ── STICKY NAV ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>80)navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+/* ── SCROLL REVEAL ── */
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>revealObserver.observe(el));
+
+/* ── PORTFOLIO FILTERS ── */
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+/* ── LIGHTBOX ── */
+const lightbox = document.getElementById('lightbox');
+const lightboxContent = document.getElementById('lightboxContent');
+const lightboxClose = document.getElementById('lightboxClose');
+function openLightbox(title){
+  lightboxContent.style.fontSize='14px';
+  lightboxContent.style.color='rgba(0,0,0,0.4)';
+  lightboxContent.style.fontFamily="var(--serif)";
+  lightboxContent.style.letterSpacing='0.08em';
+  lightboxContent.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;gap:16px;"><div style="font-size:72px;font-style:italic;color:rgba(0,0,0,0.06)">OTC</div><div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#8A7E70">${title}</div></div>`;
+  lightbox.classList.add('open');
+}
+lightboxClose.addEventListener('click',()=>lightbox.classList.remove('open'));
+lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)lightbox.classList.remove('open')});
+
+/* ── BOOKING FORM ── */
+function handleBooking(btn){
+  const orig=btn.innerHTML;
+  btn.innerHTML='<span>Sending inquiry...</span>';
+  btn.style.opacity='0.7';
+  setTimeout(()=>{
+    btn.innerHTML='<span>Inquiry Sent — Thelma will be in touch ✦</span>';
+    btn.style.background='var(--gold)';
+    btn.querySelector('span').style.color='var(--black)';
+    setTimeout(()=>{
+      btn.innerHTML=orig;
+      btn.style.background='';
+      btn.style.opacity='';
+      btn.querySelector('span').style.color='';
+    },4000);
+  },1500);
+}
+
+/* ── PARALLAX HERO ── */
+window.addEventListener('scroll',()=>{
+  const scrolled=window.scrollY;
+  const heroBg=document.querySelector('.hero-bg');
+  if(heroBg&&scrolled<window.innerHeight){
+    heroBg.style.transform=`translateY(${scrolled*0.3}px)`;
+  }
+});
+
+/* ── STAGGERED GRID REVEAL ── */
+const portfolioItems=document.querySelectorAll('.portfolio-item');
+const portfolioObserver=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>{
+        e.target.style.opacity='1';
+        e.target.style.transform='translateY(0)';
+      },i*60);
+      portfolioObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.05});
+portfolioItems.forEach(item=>{
+  item.style.opacity='0';
+  item.style.transform='translateY(20px)';
+  item.style.transition='opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1)';
+  portfolioObserver.observe(item);
+});
+</script>
+</body>
+</html>
